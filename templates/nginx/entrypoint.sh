@@ -37,7 +37,7 @@ fi
 
 # Grab environment from infisical, first check if it is installed and if enabled is set otherwise skip
 if [ -x "$(command -v infisical)" ] && [ "$INFISICAL_ENABLED" = "yes" ]; then
-  eval "$(infisical export --env=$ENVIRONMENT --path=$INFISICAL_PATH --format=dotenv-export)"
+  eval "$(infisical export --env=${ENVIRONMENT} --path=${INFISICAL_PATH} --format=dotenv-export)"
 fi
 
 # Prepare public environment variables when NGINX_ENVJS_ENABLED is set to "yes"
